@@ -3,14 +3,34 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ListaPlantasComponent } from './laminates/planta/lista-plantas/lista-plantas.component';
+import { ListaTiposComponent } from './laminates/tipoHb/lista-tipos/lista-tipos.component';
+import { ListaHabitacionesComponent } from './laminates/habitacion/lista-habitaciones/lista-habitaciones.component';
+import { DetalleHabitacionComponent } from './laminates/habitacion/detalle-habitacion/detalle-habitacion.component';
+import { FormComponent } from './laminates/habitacion/form/form.component';
+
+
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './laminates/shared/header/header.component';
+import { FormTipoComponent } from './laminates/tipoHb/form-tipo/form-tipo.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListaPlantasComponent,
+    ListaTiposComponent,
+    ListaHabitacionesComponent,
+    DetalleHabitacionComponent,
+    FormComponent,
+    HeaderComponent,
+    FormTipoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-md-4 mx-auto">
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+              <div class="form-group">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre"
+                  [(ngModel)]="tipo.nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion"
+                [(ngModel)]="tipo.descripcion" required>
+              </div>
+              <div class="form-group">
+                  <label for="max_adultos">Máximo de adultos</label>
+                  <input type="number" class="form-control" id="max_adultos" name="max_adultos"
+                  [(ngModel)]="tipo.max_adultos" required>
+              </div>
+              <div class="form-group">
+                <label for="max_ninos">Máximo de niños</label>
+                <input type="number" class="form-control" id="max_ninos" name="max_ninos"
+                [(ngModel)]="tipo.max_ninos" required>
+            </div>
+            <button class="btn btn-outline-success" [disabled]="!f.valid" style="width: 100%; margin-top: 1rem;">Crear</button>
+          </form>
+      </div>
+  </div>
+</div>
+

@@ -1,0 +1,31 @@
+<div class="container">
+
+  <h5 class="card-title">TIPO DE HABITACIONES</h5>
+  <div class="my-2 text-left">
+    <button class="button btn btn-rounded btn-primary" type="button" [routerLink]="['/tipoHb/form']"><i class="fa-solid fa-circle-plus"></i> Nuevo</button>
+  </div>
+  <table class="table table-striped table-hover">
+    <thead class="table">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Max-Adultos</th>
+        <th scope="col">Max-Niños</th>
+        <th scope="col" colspan="2" style="text-align: center;">Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tipo of tiposHb">
+        <th scope="row">{{ tipo.id_tipo }}</th>
+        <td>{{ tipo.nombre }}</td>
+        <td>{{ tipo.descripcion }}</td>
+        <td>{{ tipo.max_adultos }}</td>
+        <td>{{ tipo.max_ninos }}</td>
+        <td style="text-align: center;"><button class="btn btn-outline-warning" routerLink="/"><i class="fa-solid fa-pen-to-square"></i> Editar</button></td>
+        <td style="text-align: center;"><button class="btn btn-outline-danger" (click)="borrar(tipo.id_tipo)"> <i class="fa-solid fa-trash"></i> Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

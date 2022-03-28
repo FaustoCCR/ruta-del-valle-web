@@ -1,0 +1,15 @@
+<!-- {{ habitaciones | json}} -->
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col" *ngFor="let habitacion of habitaciones">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Nro: {{habitacion.num_habitacion}}</h5>
+        <p class="card-text">Habitación {{habitacion.tipo_habitacion}} <i class="fa-solid fa-bed" style="font-size: 2rem;right: 0;"></i></p>
+        <a href="#" class="btn btn-primary">Detalles</a>
+      </div>
+      <div class="card-footer text-center" style="text-transform: uppercase;">
+        {{habitacion.estado}}
+      </div>
+    </div>
+  </div>
+</div>
