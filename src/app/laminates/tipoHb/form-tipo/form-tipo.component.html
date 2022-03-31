@@ -1,30 +1,28 @@
-<div class="container">
-  <div class="row mt-5">
-      <div class="col-md-4 mx-auto">
-          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-              <div class="form-group">
-                  <label for="nombre">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" name="nombre"
-                  [(ngModel)]="tipo.nombre" required>
-              </div>
-              <div class="form-group">
-                <label for="descripcion">Descripción</label>
-                <input type="text" class="form-control" id="descripcion" name="descripcion"
-                [(ngModel)]="tipo.descripcion" required>
-              </div>
-              <div class="form-group">
-                  <label for="max_adultos">Máximo de adultos</label>
-                  <input type="number" class="form-control" id="max_adultos" name="max_adultos"
-                  [(ngModel)]="tipo.max_adultos" required>
-              </div>
-              <div class="form-group">
-                <label for="max_ninos">Máximo de niños</label>
-                <input type="number" class="form-control" id="max_ninos" name="max_ninos"
-                [(ngModel)]="tipo.max_ninos" required>
-            </div>
-            <button class="btn btn-outline-success" [disabled]="!f.valid" style="width: 100%; margin-top: 1rem;">Crear</button>
-          </form>
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Tipo de Habitación</h3>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="form-group mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre"
+            [(ngModel)]="tipo.nombre" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="descripcion" class="form-label">Descripción</label>
+          <input type="text" class="form-control" id="descripcion" name="descripcion"
+          [(ngModel)]="tipo.descripcion" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="max_adultos" class="form-label">Máximo de adultos</label>
+            <input type="number" class="form-control" id="max_adultos" name="max_adultos"
+            [(ngModel)]="tipo.max_adultos" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="max_ninos" class="form-label">Máximo de niños</label>
+          <input type="number" class="form-control" id="max_ninos" name="max_ninos"
+          [(ngModel)]="tipo.max_ninos" required>
       </div>
-  </div>
+      <button class="btn btn-success form-control" [disabled]="!f.valid">Crear</button>
+    </form>
 </div>
+
 

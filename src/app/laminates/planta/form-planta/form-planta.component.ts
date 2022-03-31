@@ -1,25 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { TipohbService } from '../service/tipohb.service';
-import { Tipohb } from '../tipohb';
+import { Planta } from '../planta';
+import { PlantaService } from '../service/planta.service';
 
 @Component({
-  selector: 'app-form-tipo',
-  templateUrl: './form-tipo.component.html',
-  styleUrls: ['./form-tipo.component.css']
+  selector: 'app-form-planta',
+  templateUrl: './form-planta.component.html',
+  styleUrls: ['./form-planta.component.css']
 })
-export class FormTipoComponent implements OnInit {
+export class FormPlantaComponent implements OnInit {
 
-  public tipo: Tipohb = new Tipohb();
+  planta: Planta = new Planta();
 
-  constructor(private tipoHbService:TipohbService,
+  constructor(private plantaService: PlantaService,
     private router: Router,
     private activateRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-
-    this.cargarPlanta();
+    this.cargarPlanta()
   }
 
   onCreate():void{
@@ -28,23 +27,23 @@ export class FormTipoComponent implements OnInit {
       let id = params['id']
       if(id==null){
         /* si el no existe id en la url --> guardamos */
-        this.tipoHbService.create(this.tipo)
+        this.plantaService.guardarPlanta(this.planta)
         .subscribe(data =>{
           Swal.fire({
             icon: 'success',
-            title: `Tipo de Habitación ${data.nombre} creada con éxito`
+            title: `${data.nombre} creada con éxito`
           })
-          this.router.navigate(['/']);
+          this.router.navigate(['/plantas']);
         },error => console.log(error));
       }else{
         /* caso contrario actualizamos el registro */
-        this.tipoHbService.update(id,this.tipo)
+        this.plantaService.update(id,this.planta)
         .subscribe(() =>{
           Swal.fire({
             icon: 'success',
             title: `Registro actualizado`
           })
-          this.router.navigate(['/']);
+          this.router.navigate(['/plantas']);
         })
       }
 
@@ -56,12 +55,10 @@ export class FormTipoComponent implements OnInit {
 
       let id = params['id']
       if(id){
-        this.tipoHbService.getTipoHbId(id)
-        .subscribe((tipo) => this.tipo = tipo);
+        this.plantaService.obtenerPlantaId(id)
+        .subscribe((planta) => this.planta = planta);
       }
     })
   }
-
-
 
 }

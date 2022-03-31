@@ -26,14 +26,16 @@ export class ListaTiposComponent implements OnInit {
     })
   }
 
-  borrar(id:number){
-    this.tipohbService.delete(id).subscribe(() =>{
- 
+  eliminar(id:number){
+    this.tipohbService.delete(id)
+    .subscribe(() =>{
       Swal.fire({
         icon: 'success',
         title: 'Eliminado'
       })
-    })
+
+      this.cargarTiposHb();
+    });
   }
 
 }

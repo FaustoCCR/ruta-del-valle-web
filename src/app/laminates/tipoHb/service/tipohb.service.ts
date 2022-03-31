@@ -8,7 +8,7 @@ import { Tipohb } from '../tipohb';
 })
 export class TipohbService {
 
-  private urlEndPoint: string = "http://localhost:8080/api/tiposhb/";
+  private urlEndPoint: string = "http://localhost:8080/api/tiposhb";
   private httpHeaders = new HttpHeaders({ 'Content-Type' : 'application/json' })
 
   constructor(private httpClient: HttpClient) { }
@@ -19,7 +19,7 @@ export class TipohbService {
       map(response => response as Tipohb[]));
   }
 
-  getTipoHb(id:number): Observable<Tipohb>{
+  getTipoHbId(id:number): Observable<Tipohb>{
 
     return this.httpClient.get<Tipohb>(`${this.urlEndPoint}/${id}`);
   }

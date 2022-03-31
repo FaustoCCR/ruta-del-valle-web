@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './laminates/shared/header/header.component';
 import { FormTipoComponent } from './laminates/tipoHb/form-tipo/form-tipo.component';
+import { FormPlantaComponent } from './laminates/planta/form-planta/form-planta.component';
+import { SideBarComponent } from './laminates/shared/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { FormTipoComponent } from './laminates/tipoHb/form-tipo/form-tipo.compon
     DetalleHabitacionComponent,
     FormComponent,
     HeaderComponent,
-    FormTipoComponent
+    FormTipoComponent,
+    FormPlantaComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
