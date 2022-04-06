@@ -7,7 +7,6 @@ import { ListaPlantasComponent } from './laminates/planta/lista-plantas/lista-pl
 import { ListaTiposComponent } from './laminates/tipoHb/lista-tipos/lista-tipos.component';
 import { ListaHabitacionesComponent } from './laminates/habitacion/lista-habitaciones/lista-habitaciones.component';
 import { DetalleHabitacionComponent } from './laminates/habitacion/detalle-habitacion/detalle-habitacion.component';
-import { FormComponent } from './laminates/habitacion/form/form.component';
 
 
 import { HttpClientModule } from '@angular/common/http';
@@ -16,6 +15,10 @@ import { HeaderComponent } from './laminates/shared/header/header.component';
 import { FormTipoComponent } from './laminates/tipoHb/form-tipo/form-tipo.component';
 import { FormPlantaComponent } from './laminates/planta/form-planta/form-planta.component';
 import { SideBarComponent } from './laminates/shared/side-bar/side-bar.component';
+import { LoginComponent } from './laminates/auth/login/login.component';
+import { RegistroComponent } from './laminates/auth/registro/registro.component';
+import { IndexComponent } from './laminates/index/index.component';
+import { plantaInterceptorProvider } from './interceptors/planta-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,13 @@ import { SideBarComponent } from './laminates/shared/side-bar/side-bar.component
     ListaTiposComponent,
     ListaHabitacionesComponent,
     DetalleHabitacionComponent,
-    FormComponent,
     HeaderComponent,
     FormTipoComponent,
     FormPlantaComponent,
-    SideBarComponent
+    SideBarComponent,
+    LoginComponent,
+    RegistroComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,7 @@ import { SideBarComponent } from './laminates/shared/side-bar/side-bar.component
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [plantaInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

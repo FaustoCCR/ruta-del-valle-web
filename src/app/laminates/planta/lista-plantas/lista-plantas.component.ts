@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
+import { TokenService } from '../../security/service/token.service';
 import { Planta } from '../planta';
 import { PlantaService } from '../service/planta.service';
 
@@ -11,11 +12,20 @@ import { PlantaService } from '../service/planta.service';
 export class ListaPlantasComponent implements OnInit {
 
   plantas: Planta[];
+  roles: string[];
+  isAdmin = false;
 
-  constructor(private plantaService: PlantaService) { }
+  constructor(private plantaService: PlantaService,
+    private tokenService:TokenService) { }
 
   ngOnInit(): void {
     this.obtenerPlantas();
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach(rol => {
+      if (rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
   }
 
   private obtenerPlantas(){

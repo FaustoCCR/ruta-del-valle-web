@@ -282,7 +282,7 @@ body{
 }
 
 /* contenido  */
-.home_content {
+/* .home_content {
   position: absolute;
   height: 100%;
   width: calc(100% - 78px);
@@ -302,4 +302,4 @@ body{
 .sidebar.active ~ .home_content{
   width: calc(100% - 250px);
   left: 250px;
-}
+} */

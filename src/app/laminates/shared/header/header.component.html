@@ -7,16 +7,25 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav" style="margin-left: auto;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+          <a class="nav-link active" aria-current="page" routerLink="/"><i class="fa-solid fa-house"></i> Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isLogged">
           <a class="nav-link" routerLink="/habitaciones"><i class="fa-solid fa-bed"></i> Habitaciones</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isLogged">
           <a class="nav-link" [routerLink]="['/plantas']"><i class="fa-solid fa-building"></i> Plantas</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isLogged">
           <a class="nav-link disabled"><i class="fa-solid fa-user"></i> Usuario</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link" [routerLink]="['/registro']"><i class="fa-solid fa-user-plus"></i> Crear Cuenta</a>
+        </li>
+        <li class="nav-item" *ngIf="!isLogged">
+          <a class="nav-link" [routerLink]="['/login']"><i class="fa-solid fa-arrow-right-from-bracket"></i> Iniciar Sesión</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link"  (click)="onLogOut()" style="cursor: pointer;"><i class="fa-solid fa-door-open"></i> Log out</a>
         </li>
       </ul>
     </div>
