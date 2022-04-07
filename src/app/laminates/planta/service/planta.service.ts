@@ -15,7 +15,7 @@ export class PlantaService {
 
   obtenerPlantas(): Observable<Planta[]>{
     return this.httpClient.get(`${this.urlEndPoint}`).pipe(
-      map(response => response as Planta[]));;
+      map(response => response as Planta[]));
   }
 
   obtenerPlantaId(id:number): Observable<Planta>{

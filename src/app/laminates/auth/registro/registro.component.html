@@ -1,8 +1,8 @@
-<div class="text-center" *ngIf="isLogged; else loggedOut">
+<!-- <div class="text-center" *ngIf="isLogged; else loggedOut">
   <h2>Has iniciado Sesión</h2>
-</div>
+</div> -->
 
-<ng-template #loggedOut>
+<!-- <ng-template #loggedOut> -->
   <div class="col-md-6 offset-md-3">
     <h3 class="text-center mb-3">Registrar Usuario</h3>
       <form #f="ngForm" (ngSubmit)="onRegister()" novalidate>
@@ -33,7 +33,8 @@
         <div class="form-group">
           <button class="btn btn-outline-success form-control" [disabled]="!f.valid">Crear Cuenta</button>
         </div>
+        <button class="btn btn-primary form-control mt-3" [routerLink]="['/users']"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
       </form>
   </div>
 
-</ng-template>
+<!-- </ng-template> -->

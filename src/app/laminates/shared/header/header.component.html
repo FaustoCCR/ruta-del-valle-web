@@ -15,18 +15,31 @@
         <li class="nav-item" *ngIf="isLogged">
           <a class="nav-link" [routerLink]="['/plantas']"><i class="fa-solid fa-building"></i> Plantas</a>
         </li>
-        <li class="nav-item" *ngIf="isLogged">
-          <a class="nav-link disabled"><i class="fa-solid fa-user"></i> Usuario</a>
-        </li>
-        <li class="nav-item" *ngIf="isLogged">
-          <a class="nav-link" [routerLink]="['/registro']"><i class="fa-solid fa-user-plus"></i> Crear Cuenta</a>
-        </li>
+
         <li class="nav-item" *ngIf="!isLogged">
           <a class="nav-link" [routerLink]="['/login']"><i class="fa-solid fa-arrow-right-from-bracket"></i> Iniciar Sesión</a>
         </li>
         <li class="nav-item" *ngIf="isLogged">
-          <a class="nav-link"  (click)="onLogOut()" style="cursor: pointer;"><i class="fa-solid fa-door-open"></i> Log out</a>
+          <a class="nav-link disabled"><i class="fa-solid fa-user"></i> Usuario</a>
         </li>
+        <li class="nav-item dropdown" *ngIf="isLogged">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Cuenta
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li *ngIf="isLogged">
+              <a class="dropdown-item" [routerLink]="['/registro']"><i class="fa-solid fa-user-plus"></i> Crear Cuenta</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/users']"><i class="fa-solid fa-users"></i> Usuarios</a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li *ngIf="isLogged">
+              <a class="dropdown-item"  (click)="onLogOut()" style="cursor: pointer;"><i class="fa-solid fa-door-open"></i> Log out</a>
+            </li>
+          </ul>
+        </li>
+
       </ul>
     </div>
   </div>

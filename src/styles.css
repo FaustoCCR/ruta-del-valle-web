@@ -3,3 +3,18 @@
 *{
   font-family: 'Poppins', sans-serif;
 }
+
+table{
+  overflow-y: auto;
+}
+tbody{
+  font-size: 0.75rem;
+}
+
+.btn {
+  font-size: 0.75rem;
+}
+
+thead{
+  font-size: 0.85rem;
+}

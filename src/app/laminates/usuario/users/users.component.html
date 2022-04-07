@@ -1,0 +1,36 @@
+<div class="container">
+  <h5>USUARIOS</h5>
+<div class="my-2 text-left" *ngIf="isAdmin">
+  <button class="button btn btn-rounded btn-primary" type="button" [routerLink]="['/registro']"><i class="fa-solid fa-circle-plus"></i> Nuevo</button>
+</div>
+<table class="table table-striped table-hover">
+<thead class="table-dark">
+  <tr>
+    <th>Id</th>
+    <th>DNI</th>
+    <th>Nombre</th>
+    <th>Email</th>
+    <th>Teléfono</th>
+    <th>Username</th>
+    <th>Estado</th>
+    <th>Rol</th>
+    <th scope="col" colspan="2" style="text-align: center;"*ngIf="isAdmin">Opciones</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let usuario of usuarios">
+    <td>{{usuario.id_user}}</td>
+    <td>{{usuario.dni}}</td>
+    <td>{{usuario.nombre}}</td>
+    <td>{{usuario.email}}</td>
+    <td>{{usuario.telefono}}</td>
+    <td>{{usuario.username}}</td>
+    <td>{{estado(usuario.estado)}}</td>
+    <td>{{usuario.rol}}</td>
+    
+    <td style="text-align: center;" *ngIf="isAdmin"><button class="btn btn-warning" [routerLink]="['/registro',usuario.id_user]"><i class="fa-solid fa-pen-to-square"></i> Editar</button></td>
+    <td (click)="eliminarUsuario(usuario.id_user)" style="text-align: center;"  *ngIf="isAdmin"><button class="btn btn-danger"> <i class="fa-solid fa-trash"></i> Eliminar</button></td>
+  </tr>
+</tbody>
+</table>
+</div>

@@ -19,6 +19,8 @@ import { LoginComponent } from './laminates/auth/login/login.component';
 import { RegistroComponent } from './laminates/auth/registro/registro.component';
 import { IndexComponent } from './laminates/index/index.component';
 import { plantaInterceptorProvider } from './interceptors/planta-interceptor.service';
+import { UsersComponent } from './laminates/usuario/users/users.component';
+import { FormUserComponent } from './laminates/usuario/form-user/form-user.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { plantaInterceptorProvider } from './interceptors/planta-interceptor.ser
     SideBarComponent,
     LoginComponent,
     RegistroComponent,
-    IndexComponent
+    IndexComponent,
+    UsersComponent,
+    FormUserComponent
   ],
   imports: [
     BrowserModule,

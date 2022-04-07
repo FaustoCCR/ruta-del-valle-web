@@ -52,6 +52,8 @@ export class RegistroComponent implements OnInit {
           title: `Usuario Registrado`
         })
 
+        this.router.navigate(['/users']);
+
       },
       err =>{
         this.isRegisterFail = true;
