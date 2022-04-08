@@ -21,7 +21,9 @@ import { IndexComponent } from './laminates/index/index.component';
 import { plantaInterceptorProvider } from './interceptors/planta-interceptor.service';
 import { UsersComponent } from './laminates/usuario/users/users.component';
 import { FormUserComponent } from './laminates/usuario/form-user/form-user.component';
+import { DetalleReservaComponent } from './laminates/reserva/detalle-reserva/detalle-reserva.component';
 import { FooterComponent } from './laminates/shared/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { FooterComponent } from './laminates/shared/footer/footer.component';
     IndexComponent,
     UsersComponent,
     FormUserComponent,
-    FooterComponent
+    DetalleReservaComponent,
+    FooterComponent,
+    DetalleReservaComponent
   ],
   imports: [
     BrowserModule,

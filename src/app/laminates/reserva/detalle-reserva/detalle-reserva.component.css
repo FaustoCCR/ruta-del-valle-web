@@ -1,0 +1,38 @@
+.card{
+  background: #ebebeb;
+  margin: 10px;
+}
+.title{
+  margin-bottom: 15px;
+}
+ul{
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+ul li{
+  padding: 0;
+  display: inline-block;
+  margin: 0 3rem 0 0;
+}
+ul li h6{
+  display: inline-block;
+  color: #4c728c;
+  font-weight: 520;
+}
+span{
+  margin-left: 5px;
+}
+
+.form__container{
+  margin: 10px;
+}
+
+.buttons{
+  position: relative;
+}
+
+.btn-success{
+  position: absolute;
+  right: 10px;
+}

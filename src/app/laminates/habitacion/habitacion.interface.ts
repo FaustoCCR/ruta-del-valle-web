@@ -3,6 +3,7 @@ export interface Habitacion {
   planta: string;
   tipo_habitacion: string;
   num_habitacion:number;
+  descripcion:string;
   estado:string;
   costo_noche:number;
 

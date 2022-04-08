@@ -8,12 +8,20 @@
   box-shadow: 1px 5px 5px #00000098;
 }
 
-.card-footer{
+a{
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+
+a .card-footer{
   text-transform: uppercase;
   border-top: 1px solid #ac46a1;
 }
+
 .card-text{
-  position: relative;
+  /* position: relative; */
+  display: inline-block;
   align-items: center;
   justify-content: center;
 }
@@ -29,4 +37,17 @@ p.card-text i{
 }
 .btn:hover{
   background: #4895ef;
+}
+
+i{
+  font-size: 1.75rem;
+}
+
+
+@media (min-width: 1200px){
+  i {
+    position: relative;
+    left: 1.5rem;
+    font-size: 2rem; 
+  }
 }

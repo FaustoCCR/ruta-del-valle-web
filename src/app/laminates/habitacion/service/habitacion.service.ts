@@ -8,7 +8,7 @@ import { Habitacion } from '../habitacion.interface';
 })
 export class HabitacionService {
 
-  private urlEndPoint: string = "http://localhost:8080/api/habitaciones/";
+  private urlEndPoint: string = "http://localhost:8080/api/habitaciones";
   private httpHeaders = new HttpHeaders({ 'Content-Type' : 'application/json' })
 
   /* Parámetros de consulta */
@@ -27,6 +27,10 @@ export class HabitacionService {
   getHabitacion(id:number): Observable<Habitacion> {
 
     return this.httpClient.get<Habitacion>(`${this.urlEndPoint}/${id}`);
+  }
+  
+  getHabitacionPorNumero(num:number): Observable<Habitacion>{
+    return this.httpClient.get<Habitacion>(`${this.urlEndPoint}/num_habitacion/${num}`);
   }
 
   create(habitacion: Habitacion): Observable<Habitacion> {
