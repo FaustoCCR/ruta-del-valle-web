@@ -1,0 +1,32 @@
+.card{
+    height: 50%;
+    margin: 5% auto;
+    background: #fff;
+    position: relative;
+}
+
+.card-header{
+    background: #121c3511;
+    border-radius: 4px;
+}
+
+/*efecto sombra*/
+.card::after{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: '';
+    background-image: linear-gradient(to right top,#4cc9f0,#ac46a1,#121c35,#4895ef) ;
+    width: 100%;
+    height: 100%;
+    filter: blur(15px);
+    z-index: -1;
+}
+
+h5{
+    text-align: center;
+    margin: 10px auto;
+}
+.btn{
+    font-size: 13px;
+}

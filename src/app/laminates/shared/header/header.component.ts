@@ -9,7 +9,7 @@ import { TokenService } from '../../security/service/token.service';
 export class HeaderComponent implements OnInit {
 
   isLogged = false;
-
+  username: string|null= '';
 
   constructor(private tokenService:TokenService) { }
 
@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
   checkLogin(): void{
     if (this.tokenService.getToken()) {
       this.isLogged = true;
+      this.username = this.tokenService.getUsername();
     }else{
       this.isLogged = false;
     }
