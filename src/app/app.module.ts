@@ -21,6 +21,7 @@ import { IndexComponent } from './laminates/index/index.component';
 import { plantaInterceptorProvider } from './interceptors/planta-interceptor.service';
 import { UsersComponent } from './laminates/usuario/users/users.component';
 import { FormUserComponent } from './laminates/usuario/form-user/form-user.component';
+import { DetalleReservaComponent } from './laminates/reserva/detalle-reserva/detalle-reserva.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FormUserComponent } from './laminates/usuario/form-user/form-user.compo
     RegistroComponent,
     IndexComponent,
     UsersComponent,
-    FormUserComponent
+    FormUserComponent,
+    DetalleReservaComponent
   ],
   imports: [
     BrowserModule,

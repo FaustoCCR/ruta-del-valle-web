@@ -11,6 +11,7 @@ import { ListaTiposComponent } from './laminates/tipoHb/lista-tipos/lista-tipos.
 import { PlantaGuardService as guard } from './guards/planta-guard.service';
 import { UsersComponent } from './laminates/usuario/users/users.component';
 import { FormUserComponent } from './laminates/usuario/form-user/form-user.component';
+import { DetalleReservaComponent } from './laminates/reserva/detalle-reserva/detalle-reserva.component';
 
 const routes: Routes = [
   {path: '', component: IndexComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'planta/form/:id', component: FormPlantaComponent, canActivate:[guard], data:{expectedRol:['admin']}},
   {path: 'users', component: UsersComponent},
   {path: 'registro/:id', component: FormUserComponent},
+  {path: 'reserva/detalle/:num', component: DetalleReservaComponent},
   {path: '**', redirectTo: '',pathMatch: 'full'}
 ];
 
