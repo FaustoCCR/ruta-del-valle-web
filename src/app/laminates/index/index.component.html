@@ -1,5 +1,12 @@
-<app-header></app-header>
-<div class="container text-center">
-  <div *ngIf="isLogged;else loggedOut"><h2>Bienvenido {{username}}</h2></div>
-  <ng-template #loggedOut><h2>No has iniciado Sesión</h2></ng-template>
-</div>
+<!--<app-header></app-header>-->
+
+  <div class="container" *ngIf="isLogged;else loggedOut">
+    <h2 style="text-align: center;">Bienvenido</h2>
+  </div>
+
+  <ng-template  #loggedOut>
+    <div class="container">
+      <app-login></app-login>
+    </div>
+  </ng-template>
+

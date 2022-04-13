@@ -2,6 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 *{
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body { 
+  margin:0px;
+  padding: 0px;;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer{
+  margin-top: auto;
 }
 
 table{
@@ -17,4 +31,5 @@ tbody{
 
 thead{
   font-size: 0.85rem;
+
 }

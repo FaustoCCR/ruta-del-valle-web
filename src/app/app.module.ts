@@ -22,6 +22,8 @@ import { plantaInterceptorProvider } from './interceptors/planta-interceptor.ser
 import { UsersComponent } from './laminates/usuario/users/users.component';
 import { FormUserComponent } from './laminates/usuario/form-user/form-user.component';
 import { DetalleReservaComponent } from './laminates/reserva/detalle-reserva/detalle-reserva.component';
+import { FooterComponent } from './laminates/shared/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { DetalleReservaComponent } from './laminates/reserva/detalle-reserva/det
     IndexComponent,
     UsersComponent,
     FormUserComponent,
+    DetalleReservaComponent,
+    FooterComponent,
     DetalleReservaComponent
   ],
   imports: [
