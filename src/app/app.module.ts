@@ -42,8 +42,7 @@ import { FooterComponent } from './laminates/shared/footer/footer.component';
     UsersComponent,
     FormUserComponent,
     DetalleReservaComponent,
-    FooterComponent,
-    DetalleReservaComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,

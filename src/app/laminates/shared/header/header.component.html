@@ -13,16 +13,17 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="/"><i class="fa-solid fa-house"></i> Home</a>
         </li>
-<!--habitaiones-->
-        <li class="nav-item dropdown">
+<!--habitaciones-->
+        <li class="nav-item dropdown" *ngIf="isLogged">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Habitaciones</a>
           <ul class="dropdown-menu">
+            <li *ngIf="isLogged"><a class="dropdown-item" routerLink="/habitaciones"><i class="fa-solid fa-bed"></i> Habitaciones</a></li>
             <li><a class="dropdown-item" [routerLink]="['/plantas']"><i class="fa-solid fa-building"></i> Plantas</a></li>
             <li><a class="dropdown-item" >tipo</a></li>
           </ul>
         </li>
 <!--Servicios-->
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" *ngIf="isLogged">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Servicios</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" [routerLink]="['/']">Consumo</a></li>
@@ -30,7 +31,7 @@
           </ul>
         </li>
 <!--Documentos-->
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" *ngIf="isLogged">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Documentos</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" [routerLink]="['/']">Reserva</a></li>
@@ -38,6 +39,9 @@
           </ul>
         </li>
 <!--para los usuario-->
+        <li class="nav-item" *ngIf="!isLogged">
+        <a class="nav-link" [routerLink]="['/login']"><i class="fa-solid fa-arrow-right-from-bracket"></i> Iniciar Sesión</a>
+        </li>
         <li class="nav-item dropdown" *ngIf="isLogged">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fa-solid fa-user"></i> {{ username }}</a>
           
