@@ -23,8 +23,12 @@ export class UsuarioService {
     return this.httpClient.get<Usuario>(`${this.urlEndPoint}/${id}`);
   }
 
+  obtenerUsuarioByDni(dni:string):Observable<Usuario>{
+    return this.httpClient.get<Usuario>(`${this.urlEndPoint}/dni/${dni}`);
+  }
+
   actualizarUsuario(id:number, usuario:Usuario): Observable<any>{
-    return this.httpClient.put(`${this.urlEndPoint}/${id}`,usuario,{headers: this.httpHeaders});
+    return this.httpClient.put<Usuario>(`${this.urlEndPoint}/${id}`,usuario,{headers: this.httpHeaders});
 
   }
 

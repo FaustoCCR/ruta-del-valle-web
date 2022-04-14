@@ -15,15 +15,24 @@
           <h6>ESTADO:</h6>
           <span>{{habitacion.estado}}</span>
         </li>
-      </ul>
-      <ul>
         <li>
           <h6>PLANTA:</h6>
           <span>{{habitacion.planta}}</span>
         </li>
+      </ul>
+      <ul>
+
         <li>
           <h6>DESCRIPCIÓN:</h6>
           <span>{{habitacion.descripcion}}</span>
+        </li>
+        <li>
+          <h6>MAX ADULTOS:</h6>
+          <span>{{habitacion.max_adultos}}</span>
+        </li>
+        <li>
+          <h6>MAX NIÑOS:</h6>
+          <span>{{habitacion.max_ninos}}</span>
         </li>
         <li>
           <h6>PRECIO:</h6>
@@ -36,27 +45,46 @@
 <div class="form__container">
   <form class="row g-3">
     <div class="col-md-6">
+      <label for="dni" class="form-label">DNI</label>
+      <input name="dni" id="dni" type="text" class="form-control" [(ngModel)]="reserva.dni" (input)="showClienteByDni()">
+    </div>
+    <div class="col-md-6">
+      <label for="estado" class="form-label">Estado</label>
+      <select name="estado" class="form-select" [(ngModel)]="reserva.estado">
+        <option *ngFor="let estado of estadosReserva" [value]="estado">{{estado}}</option>
+      </select>
+    </div>
+    <div class="col-md-6">
       <label for="cliente" class="form-label">Cliente</label>
-      <input name="cliente" id="cliente" type="text" class="form-control" [(ngModel)]="reserva.cliente">
+      <input name="cliente" id="cliente" type="text" class="form-control" [(ngModel)]="reserva.cliente" disabled>
     </div>
     <div class="col-md-6">
       <label for="f_reserva" class="form-label">Fecha de Reserva</label>
-      <input type="text" name="f_reserva" class="form-control" id="fecha_reserva"
+      <input type="date" name="f_reserva" class="form-control" id="fecha_reserva"
        [value]="reserva.fecha_reserva">
     </div>
     <div class="col-md-6">
       <label for="f_ingreso" class="form-label">Fecha de Ingreso</label>
-      <input name="f_ingreso" type="date" class="form-control" id="f_ingreso" [(ngModel)]="reserva.fecha_ingreso">
+      <input name="f_ingreso" type="date" class="form-control" id="f_ingreso" [(ngModel)]="reserva.fecha_ingreso"
+      (input)="calcularCostoAlojamiento()">
     </div>
     <div class="col-md-6">
       <label for="f_salida" class="form-label">Fecha de Salida</label>
-      <input name="f_salida" type="text" class="form-control" id="f_salida"[(ngModel)]="reserva.fecha_salida">
+      <input name="f_salida" type="date" class="form-control" id="f_salida"[(ngModel)]="reserva.fecha_salida"
+      (input)="calcularCostoAlojamiento()">
+    </div>
+    <div class="col-md-6">
+      <label for="adultos" class="form-label">Adultos</label>
+      <input name="adultos" id="adultos" type="number" class="form-control" [(ngModel)]="reserva.adultos">
+    </div>
+    <div class="col-md-6">
+      <label for="ninos" class="form-label">Niños</label>
+      <input name="ninos" id="ninos" type="number" class="form-control" [(ngModel)]="reserva.ninos">
     </div>
     <div class="col-md-6">
       <label for="observaciones" class="form-label">Observaciones</label>
       <textarea name="observaciones" id="observaciones" class="form-control" placeholder="Escriba aquí algún detalle que tenga el registro" [(ngModel)]="reserva.observaciones"></textarea>
     </div>
-
     <div class="col-md-4">
       <label for="costo_alojamiento" class="form-label">Total a Pagar</label>
       <div class="input-group">
@@ -65,10 +93,9 @@
       </div>
     </div>
 
-
    <div class="col-md-12 buttons">
     <button type="submit" class="btn btn-primary" [routerLink]="['/habitaciones']">Regresar</button>
-    <button type="submit" class="btn btn-success">Registrar</button>
+    <button type="submit" class="btn btn-success" (click)="OnEdit()">Registrar</button>
    </div>
   </form>
 </div>

@@ -6,5 +6,7 @@ export interface Habitacion {
   descripcion:string;
   estado:string;
   costo_noche:number;
+  max_adultos: number,
+  max_ninos: number,
 
 }

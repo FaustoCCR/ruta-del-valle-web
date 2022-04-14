@@ -19,4 +19,16 @@ export class ReservaService {
     return this.httpClient.get<Reserva>(`${this.urlEndPoint}/detalle/${num}`);
 
   }
+
+  createReservaByDni(reserva: Reserva): Observable<Reserva>{
+
+    return this.httpClient.post<Reserva>(`${this.urlEndPoint}/byDni`,reserva,{headers: this.httpHeaders});
+  }
+
+  updateReserva(id_reserva: number,reserva: Reserva): Observable<Reserva>{
+    
+    return this.httpClient.put<Reserva>(`${this.urlEndPoint}/edit/${id_reserva}`,reserva,{headers: this.httpHeaders});
+  }
+
+  
 }
