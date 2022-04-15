@@ -12,6 +12,7 @@ import { PlantaGuardService as guard } from './guards/planta-guard.service';
 import { UsersComponent } from './laminates/usuario/users/users.component';
 import { FormUserComponent } from './laminates/usuario/form-user/form-user.component';
 import { DetalleReservaComponent } from './laminates/reserva/detalle-reserva/detalle-reserva.component';
+import { HabitacionesToSellComponent } from './laminates/consumo/habitaciones-to-sell/habitaciones-to-sell.component';
 
 const routes: Routes = [
   {path: '', component: IndexComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'users', component: UsersComponent},
   {path: 'registro/:id', component: FormUserComponent},
   {path: 'reserva/detalle/:num', component: DetalleReservaComponent},
+  {path: 'habitaciones/consumo', component: HabitacionesToSellComponent},
   {path: '**', redirectTo: '',pathMatch: 'full'}
 ];
 

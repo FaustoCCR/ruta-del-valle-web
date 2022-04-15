@@ -23,6 +23,8 @@ import { UsersComponent } from './laminates/usuario/users/users.component';
 import { FormUserComponent } from './laminates/usuario/form-user/form-user.component';
 import { DetalleReservaComponent } from './laminates/reserva/detalle-reserva/detalle-reserva.component';
 import { FooterComponent } from './laminates/shared/footer/footer.component';
+import { FormConsumoComponent } from './laminates/consumo/form-consumo/form-consumo.component';
+import { HabitacionesToSellComponent } from './laminates/consumo/habitaciones-to-sell/habitaciones-to-sell.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { FooterComponent } from './laminates/shared/footer/footer.component';
     UsersComponent,
     FormUserComponent,
     DetalleReservaComponent,
-    FooterComponent
+    FooterComponent,
+    FormConsumoComponent,
+    HabitacionesToSellComponent
   ],
   imports: [
     BrowserModule,

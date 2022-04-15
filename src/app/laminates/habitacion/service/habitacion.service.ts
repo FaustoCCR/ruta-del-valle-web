@@ -24,6 +24,12 @@ export class HabitacionService {
       map(response => response as Habitacion[]));
   }
 
+  getHabitacionByEstado(param:String):Observable<Habitacion[]>{
+    return this.httpClient.get(`${this.urlEndPoint}/?estado=${param}`).pipe(
+      map(response => response as Habitacion[])
+    );
+  }
+
   getHabitacion(id:number): Observable<Habitacion> {
 
     return this.httpClient.get<Habitacion>(`${this.urlEndPoint}/${id}`);
