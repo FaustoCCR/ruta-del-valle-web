@@ -98,6 +98,7 @@ export class DetalleReservaComponent implements OnInit {
     
     this.reserva.id_habitacion = this.habitacion.id_habitacion;
     this.reserva.cliente = this.reserva.dni;
+
     if (this.reserva.cliente!=null) {
       if (this.reserva.adultos<=this.habitacion.max_adultos && this.reserva.ninos<=this.habitacion.max_ninos)  {
         this.reservaService.createReservaByDni(this.reserva)
@@ -132,8 +133,10 @@ export class DetalleReservaComponent implements OnInit {
 
     this.reserva.cliente = this.reserva.dni;
     this.reserva.id_habitacion = this.habitacion.id_habitacion;
+
     if (this.reserva.cliente!=null) {
       if (this.reserva.adultos<=this.habitacion.max_adultos && this.reserva.ninos<=this.habitacion.max_ninos)  {
+
         this.reservaService.updateReserva(this.reserva.id_reserva,this.reserva)
         .subscribe(() =>{
           Swal.fire({

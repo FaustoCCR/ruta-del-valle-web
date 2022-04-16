@@ -1,0 +1,42 @@
+
+<h5>Lista de reservas</h5>
+<div class="my-2 text-left">
+  <button class="button btn btn-rounded btn-primary" type="button" [routerLink]="['/reservas']"><i class="fa-solid fa-circle-plus"></i> Nuevo </button>
+</div>
+
+<table class="table table-striped table-hover">
+<thead class="table-dark">
+  <tr>
+    <td>Id pago</td>
+    <td>Id Reserva</td>
+    <td>Cliente</td>
+    <td>Nº Habitación</td>
+    <td>Tipo de habitación</td>
+    <td>Planta</td>
+    <td>Emisión</td>
+    <td>Consumo</td>
+    <td>Alojamiento</td>
+    <td>Subtotal</td>
+    <td>Total</td>
+    <td> Reporte</td>
+  </tr>
+
+</thead>
+<tbody>
+  <tr *ngFor="let pago of pagos">
+    <td>{{pago.id_pago}}</td>
+    <td>{{pago.id_reserva}}</td>
+    <td>{{pago.cliente}}</td>
+    <td>{{pago.num_habitacion}}</td>
+    <td>{{pago.tipo_habitacion}}</td>
+    <td>{{pago.planta}}</td>
+    <td>{{pago.fecha_emision}}</td>
+    <td>$ {{pago.pago_consumo}}</td>
+    <td>$ {{pago.pago_alojamiento}}</td>
+    <td>$ {{pago.subtotal}}</td>
+    <td>$ {{pago.total}}</td>
+    <td><button class="btn btn-danger"><i class="fa-solid fa-file-pdf"></i> PDF </button></td>
+  </tr>
+</tbody>
+</table>
+

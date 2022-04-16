@@ -7,7 +7,7 @@
           <p class="card-text">Habitación {{habitacion.tipo_habitacion}} </p>
           <span><i class="fa-solid fa-bed"></i></span>
         </div>
-        <a [routerLink]="['/reserva/detalle',habitacion.num_habitacion]">
+        <a [routerLink]="['/']">
           <div class="card-footer text-center"[ngStyle]="{'background-color':getColorFooter(habitacion.estado)}">
             {{habitacion.estado}}
           </div>

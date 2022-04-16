@@ -34,8 +34,8 @@
         <li class="nav-item dropdown" *ngIf="isLogged">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Documentos</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" [routerLink]="['/']">Reserva</a></li>
-            <li><a class="dropdown-item" >Pagos</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/reservas']"><i class="fa-solid fa-address-book"></i> Reservas</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/pagos']"><i class="fa-solid fa-money-bill-wave"></i> Pagos</a></li>
           </ul>
         </li>
 <!--para los usuario-->
