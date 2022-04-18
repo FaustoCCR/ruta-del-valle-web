@@ -2,7 +2,6 @@ import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { Planta } from '../../planta/planta';
 import { Habitacion } from '../habitacion.interface';
 import { HabitacionService } from '../service/habitacion.service';
 

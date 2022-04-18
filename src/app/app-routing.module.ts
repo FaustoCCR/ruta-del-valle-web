@@ -13,6 +13,7 @@ import { UsersComponent } from './laminates/usuario/users/users.component';
 import { FormUserComponent } from './laminates/usuario/form-user/form-user.component';
 import { DetalleReservaComponent } from './laminates/reserva/detalle-reserva/detalle-reserva.component';
 import { HabitacionesToSellComponent } from './laminates/consumo/habitaciones-to-sell/habitaciones-to-sell.component';
+import { FormHabitacionComponent } from './laminates/habitacion/form-habitacion/form-habitacion.component';
 import { ListaReservasComponent } from './laminates/reserva/lista-reservas/lista-reservas.component';
 import { ListaPagosComponent } from './laminates/pago/lista-pagos/lista-pagos.component';
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'registro', component: RegistroComponent},
   {path: 'tiposHb', component: ListaTiposComponent},
   {path: 'habitaciones', component: ListaHabitacionesComponent},
+  {path: 'habitacion/form', component: FormHabitacionComponent},
   {path: 'tipoHb/form', component: FormTipoComponent},
   {path: 'tipoHb/form/:id', component: FormTipoComponent},
   {path: 'plantas', component: ListaPlantasComponent, canActivate:[guard], data:{expectedRol:['admin','user']}},
