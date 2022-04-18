@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { TipohbService } from '../service/tipohb.service';
@@ -12,15 +13,29 @@ import { Tipohb } from '../tipohb';
 export class FormTipoComponent implements OnInit {
 
   public tipo: Tipohb = new Tipohb();
+  form: FormGroup;
+  private formBuilder: FormBuilder;
 
   constructor(private tipoHbService:TipohbService,
     private router: Router,
-    private activateRoute: ActivatedRoute) { }
+    private activateRoute: ActivatedRoute
+    ) {
+      //this.buildForm(); 
+    }
 
   ngOnInit(): void {
-
     this.cargarPlanta();
   }
+
+  private buildForm(){
+    this.form = this.formBuilder.group({
+      nombre:[],
+      descripcion:[],
+      max_adultos:[0, Validators.min(18)],
+      max_ninos:[],
+    })
+  }
+
 
   onCreate():void{
     this.activateRoute.params.subscribe(params =>{
@@ -62,6 +77,6 @@ export class FormTipoComponent implements OnInit {
     })
   }
 
-
+  
 
 }
