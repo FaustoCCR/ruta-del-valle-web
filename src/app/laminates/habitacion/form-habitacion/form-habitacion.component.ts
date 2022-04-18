@@ -11,7 +11,7 @@ import { HabitacionService } from '../service/habitacion.service';
 })
 export class FormHabitacionComponent implements OnInit {
 
-  public habi: Habitacion = new Habitacion();
+  public habi: Habitacion;//error
 
   constructor(private habitacionService:HabitacionService,
     private router: Router,
