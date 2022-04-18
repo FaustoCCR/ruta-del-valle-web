@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Reserva } from '../reserva';
 
 @Injectable({
@@ -29,6 +29,17 @@ export class ReservaService {
     
     return this.httpClient.put<Reserva>(`${this.urlEndPoint}/edit/${id_reserva}`,reserva,{headers: this.httpHeaders});
   }
+
+
+  getReservas(): Observable<Reserva[]>{
+
+    return this.httpClient.get(this.urlEndPoint).pipe(
+      map(response => response as Reserva[])
+    );
+
+  }
+
+  
 
   
 }

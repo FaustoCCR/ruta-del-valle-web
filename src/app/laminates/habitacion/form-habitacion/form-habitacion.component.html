@@ -1,0 +1,31 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Crear Hbaitacion</h3>
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group mb-3">
+              <label for="planta" class="form-label">Nombre de la Planta</label>
+              <input type="text" class="form-control" id="planta" name="planta"
+              [(ngModel)]="habi.planta" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="tipo_habitacion" class="form-label">Tipo de habitacion</label>
+            <input type="text" class="form-control" id="tipo_habitacion" name="tipo_habitacion"
+            [(ngModel)]="habi.tipo_habitacion" required>
+        </div>
+        <div class="form-group mb-3">
+            <label for="num_habitacion" class="form-label">Numero de la habitacion</label>
+            <input type="number" class="form-control" id="num_habitacion" name="num_habitacion"
+            [(ngModel)]="habi.num_habitacion" required>
+        </div>
+          <div class="form-group mb-3">
+            <label for="estado" class="form-label">Estado</label>
+            <input type="text" class="form-control" id="estado" name="estado"
+            [(ngModel)]="habi.estado" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="costo_noche" class="form-label">Valor de la noche</label>
+            <input type="number" class="form-control" id="costo_noche" name="costo_noche"
+            [(ngModel)]="habi.costo_noche" required>
+        </div>
+        <button class="btn btn-success form-control" [disabled]="!f.valid">Crear</button>
+      </form>
+  </div>
