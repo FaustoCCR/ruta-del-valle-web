@@ -1,4 +1,3 @@
-import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
@@ -12,7 +11,7 @@ import { HabitacionService } from '../service/habitacion.service';
 })
 export class FormHabitacionComponent implements OnInit {
 
-  public habi: Habitacion;
+  public habi: Habitacion = new Habitacion();
 
   constructor(private habitacionService:HabitacionService,
     private router: Router,
@@ -24,11 +23,10 @@ export class FormHabitacionComponent implements OnInit {
 
   onCreate():void{
     this.activateRoute.params.subscribe(params =>{
-      let id = params['id']
+      let id_habitacion = params['id_habitacion']
       let id_planta = params['id_planta']
       let id_tipo = params['id_tipo']
-      if(id==null){
-        /* si el no existe id en la url --> guardamos */
+      if(id_habitacion==null){
         this.habitacionService.create(this.habi)
         .subscribe(data =>{
           Swal.fire({
@@ -38,8 +36,7 @@ export class FormHabitacionComponent implements OnInit {
           this.router.navigate(['/']);
         },error => console.log(error));
       }else{
-        /* caso contrario actualizamos el registro */
-        this.habitacionService.update(id,id_planta,id_tipo, this.habi)
+        this.habitacionService.update(id_habitacion,id_planta,id_tipo, this.habi)
         .subscribe(() =>{
           Swal.fire({
             icon: 'success',
