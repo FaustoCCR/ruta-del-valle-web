@@ -23,4 +23,11 @@ export class PagoService {
       map(response => response as Pago[])
     )
   }
+
+  generateReport(id_reserva:number):Observable<any>{
+
+    const headers = new HttpHeaders().set('Content-Type','application/json');
+
+    return this.httpClient.get(`${this.urlEndPoint}/reporte/${id_reserva}`,{headers, responseType: 'blob' as 'json'});
+  }
 }

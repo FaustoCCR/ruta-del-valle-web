@@ -35,7 +35,8 @@
     <td>$ {{pago.pago_alojamiento}}</td>
     <td>$ {{pago.subtotal}}</td>
     <td>$ {{pago.total}}</td>
-    <td><button class="btn btn-danger"><i class="fa-solid fa-file-pdf"></i> PDF </button></td>
+    <td><button class="btn btn-danger" (click)="generarReportePDF(pago.id_reserva)">
+      <i class="fa-solid fa-file-pdf"></i> PDF </button></td>
   </tr>
 </tbody>
 </table>

@@ -27,4 +27,32 @@ export class ListaPagosComponent implements OnInit {
 
   }
 
+
+  generarReportePDF(id_reserva:number){
+
+    this.pagoService.generateReport(id_reserva).subscribe(
+      response =>{
+
+        this.managePdfFile(response,`Reporte Pago_Reserva ${id_reserva}`);
+        
+      }
+    );
+    
+  }
+
+  managePdfFile(response:any, fileName: string): void{
+
+    const dataType = response.type;
+    const binaryData = [];
+    binaryData.push(response);
+
+    const filePath = window.URL.createObjectURL(new Blob (binaryData, {type: dataType}));
+    const downloadLink = document.createElement('a');
+    downloadLink.href = filePath;
+    downloadLink.setAttribute('download',fileName);
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+
+  }
+
 }
