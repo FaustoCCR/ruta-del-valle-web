@@ -23,10 +23,12 @@ import { UsersComponent } from './laminates/usuario/users/users.component';
 import { FormUserComponent } from './laminates/usuario/form-user/form-user.component';
 import { DetalleReservaComponent } from './laminates/reserva/detalle-reserva/detalle-reserva.component';
 import { FooterComponent } from './laminates/shared/footer/footer.component';
-import { FormConsumoComponent } from './laminates/consumo/form-consumo/form-consumo.component';
 import { HabitacionesToSellComponent } from './laminates/consumo/habitaciones-to-sell/habitaciones-to-sell.component';
 import { ProductoComponent } from './laminates/producto/producto/producto.component';
 import { FormProductoComponent } from './laminates/producto/form-producto/form-producto.component';
+import { FormConsumoComponent } from './laminates/consumo/form-consumo/form-consumo.component';
+import { ConsumoComponent } from './laminates/consumo/consumo-producto/consumo.component';
+
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { FormProductoComponent } from './laminates/producto/form-producto/form-p
     FormConsumoComponent,
     HabitacionesToSellComponent,
     ProductoComponent,
-    FormProductoComponent
+    FormProductoComponent,
+    FormConsumoComponent,
+    ConsumoComponent
   ],
   imports: [
     BrowserModule,
