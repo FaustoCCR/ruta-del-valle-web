@@ -1,0 +1,20 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Producto</h3>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+      <div class="form-group mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+   
+        <input type="text" id="nombre" name="nombre" class="form-control" [(ngModel)]="producto.nombre" required>
+        <label for="descripción" class="form-label">Descripción</label>
+        <input type="text" id="descripción" name="descripción" class="form-control" [(ngModel)]="producto.descripcion" required>
+        <label for="precio_venta" class="form-label">Precio</label>
+        <input type="text" id="precio_venta" name="precio_venta" class="form-control" [(ngModel)]="producto.precio_venta" required>
+        <label for="stock" class="form-label">Stock</label>
+        <input type="text" id="stock" name="stock" class="form-control" [(ngModel)]="producto.stock" required>
+        
+      </div>
+      <button class="btn btn-success form-control mb-3" [disabled]="!f.valid">Crear</button>
+      <button class="btn btn-primary form-control" [routerLink]="['/productos']"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+    </form>
+  </div>
+  

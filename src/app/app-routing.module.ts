@@ -13,6 +13,8 @@ import { UsersComponent } from './laminates/usuario/users/users.component';
 import { FormUserComponent } from './laminates/usuario/form-user/form-user.component';
 import { DetalleReservaComponent } from './laminates/reserva/detalle-reserva/detalle-reserva.component';
 import { HabitacionesToSellComponent } from './laminates/consumo/habitaciones-to-sell/habitaciones-to-sell.component';
+import { ProductoComponent } from './laminates/producto/producto/producto.component';
+import { FormProductoComponent } from './laminates/producto/form-producto/form-producto.component';
 
 const routes: Routes = [
   {path: '', component: IndexComponent},
@@ -25,6 +27,9 @@ const routes: Routes = [
   {path: 'plantas', component: ListaPlantasComponent, canActivate:[guard], data:{expectedRol:['admin','user']}},
   {path: 'planta/form', component: FormPlantaComponent, canActivate:[guard], data:{expectedRol:['admin']}},
   {path: 'planta/form/:id', component: FormPlantaComponent, canActivate:[guard], data:{expectedRol:['admin']}},
+  {path: 'productos', component: ProductoComponent, canActivate:[guard], data:{expectedRol:['admin']}},
+  {path: 'productos/form', component: FormProductoComponent, canActivate:[guard], data:{expectedRol:['admin']}},
+  {path: 'productos/form/:id', component: FormProductoComponent, canActivate:[guard], data:{expectedRol:['admin']}},
   {path: 'users', component: UsersComponent},
   {path: 'registro/:id', component: FormUserComponent},
   {path: 'reserva/detalle/:num', component: DetalleReservaComponent},
