@@ -5,13 +5,21 @@
       <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
           <div class="form-group mb-3">
               <label for="planta" class="form-label">Nombre de la Planta</label>
-              <input type="text" class="form-control" id="planta" name="planta"
-              [(ngModel)]="habi.planta" required>
+<!--               <input type="text" class="form-control" id="planta" name="planta"
+              [(ngModel)]="habi.planta" required> -->
+
+              <select name="planta" class="form-select" [(ngModel)]="habi.planta">
+                <option *ngFor="let planta of plantas" [value]="planta.nombre">{{planta.nombre}}</option>
+              </select>
           </div>
           <div class="form-group mb-3">
             <label for="tipo_habitacion" class="form-label">Tipo de habitacion</label>
-            <input type="text" class="form-control" id="tipo_habitacion" name="tipo_habitacion"
-            [(ngModel)]="habi.tipo_habitacion" required>
+<!--             <input type="text" class="form-control" id="tipo_habitacion" name="tipo_habitacion"
+            [(ngModel)]="habi.tipo_habitacion" required> -->
+            
+            <select name="tipo_habitacion" class="form-select" [(ngModel)]="habi.tipo_habitacion">
+              <option *ngFor="let tipohb of tiposHb" [value]="tipohb.nombre">{{tipohb.nombre}}</option>
+            </select>
         </div>
         <div class="form-group mb-3">
             <label for="num_habitacion" class="form-label">Numero de la habitacion</label>
@@ -20,8 +28,11 @@
         </div>
           <div class="form-group mb-3">
             <label for="estado" class="form-label">Estado</label>
-            <input type="text" class="form-control" id="estado" name="estado"
-            [(ngModel)]="habi.estado" required>
+<!--             <input type="text" class="form-control" id="estado" name="estado"
+            [(ngModel)]="habi.estado" required> -->
+            <select name="estado" class="form-select" [(ngModel)]="habi.estado">
+              <option *ngFor="let estado of estados" [value]="estado">{{estado}}</option>
+            </select>
           </div>
           <div class="form-group mb-3">
             <label for="costo_noche" class="form-label">Valor de la noche</label>
