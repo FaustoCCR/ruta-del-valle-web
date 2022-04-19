@@ -7,6 +7,7 @@ import { IndexComponent } from './laminates/index/index.component';
 import { FormPlantaComponent } from './laminates/planta/form-planta/form-planta.component';
 import { ListaPlantasComponent } from './laminates/planta/lista-plantas/lista-plantas.component';
 import { FormTipoComponent } from './laminates/tipoHb/form-tipo/form-tipo.component';
+import { FormHabitacionComponent } from './laminates/habitacion/form-habitacion/form-habitacion.component';
 import { ListaTiposComponent } from './laminates/tipoHb/lista-tipos/lista-tipos.component';
 import { PlantaGuardService as guard } from './guards/planta-guard.service';
 import { UsersComponent } from './laminates/usuario/users/users.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'habitaciones', component: ListaHabitacionesComponent},
   {path: 'tipoHb/form', component: FormTipoComponent},
   {path: 'tipoHb/form/:id', component: FormTipoComponent},
+  {path: 'habitacion/form', component: FormHabitacionComponent},
   {path: 'plantas', component: ListaPlantasComponent, canActivate:[guard], data:{expectedRol:['admin','user']}},
   {path: 'planta/form', component: FormPlantaComponent, canActivate:[guard], data:{expectedRol:['admin']}},
   {path: 'planta/form/:id', component: FormPlantaComponent, canActivate:[guard], data:{expectedRol:['admin']}},

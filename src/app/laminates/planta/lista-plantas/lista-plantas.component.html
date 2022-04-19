@@ -1,5 +1,4 @@
-
-  <h5>Lista de plantas</h5>
+<h5>Lista de plantas</h5>
   <div class="my-2 text-left" *ngIf="isAdmin">
     <button class="button btn btn-rounded btn-primary" type="button" [routerLink]="['/planta/form']"><i class="fa-solid fa-circle-plus"></i> Nuevo </button>
   </div>
@@ -11,7 +10,6 @@
       <td>Nombre</td>
       <td scope="col" colspan="2" style="text-align: center;" *ngIf="isAdmin"> Opciones </td>
     </tr>
-
   </thead>
   <tbody>
     <tr *ngFor="let planta of plantas">
@@ -22,7 +20,6 @@
         <button class="btn btn-warning" [routerLink]="['/planta/form',planta.id_planta]"><i class="fa-solid fa-pen-to-square"></i> Editar</button></td>
       <td (click)="eliminarPlanta(planta.id_planta)" style="text-align: center;"  *ngIf="isAdmin">
         <button class="btn btn-danger"> <i class="fa-solid fa-trash"></i> Eliminar</button></td>
-   
       </tr>
   </tbody>
   </table>
