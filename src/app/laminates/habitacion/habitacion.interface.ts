@@ -8,5 +8,4 @@ export interface Habitacion {
   costo_noche:number;
   max_adultos: number,
   max_ninos: number,
-
 }

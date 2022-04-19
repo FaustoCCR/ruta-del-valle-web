@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './laminates/shared/header/header.component';
 import { FormTipoComponent } from './laminates/tipoHb/form-tipo/form-tipo.component';
 import { FormPlantaComponent } from './laminates/planta/form-planta/form-planta.component';
+import { FormHabitacionComponent } from './laminates/habitacion/form-habitacion/form-habitacion.component';
 import { SideBarComponent } from './laminates/shared/side-bar/side-bar.component';
 import { LoginComponent } from './laminates/auth/login/login.component';
 import { RegistroComponent } from './laminates/auth/registro/registro.component';
@@ -54,7 +55,8 @@ import { ConsumoComponent } from './laminates/consumo/consumo-producto/consumo.c
     ProductoComponent,
     FormProductoComponent,
     FormConsumoComponent,
-    ConsumoComponent
+    ConsumoComponent,
+    FormHabitacionComponent
   ],
   imports: [
     BrowserModule,
