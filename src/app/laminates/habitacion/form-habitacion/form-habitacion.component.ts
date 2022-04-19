@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { Planta } from '../../planta/planta';
+import { PlantaService } from '../../planta/service/planta.service';
+import { TipohbService } from '../../tipoHb/service/tipohb.service';
+import { Tipohb } from '../../tipoHb/tipohb';
 import { Habitacion } from '../habitacion';
 import { HabitacionService } from '../service/habitacion.service';
 
@@ -11,14 +15,25 @@ import { HabitacionService } from '../service/habitacion.service';
 })
 export class FormHabitacionComponent implements OnInit {
 
+  estados:string[] = ["Disponible","Reservada","Ocupada"];
   public habi: Habitacion = new Habitacion();//error
+
+  
+
+  plantas:Planta[] = [];
+
+  tiposHb:Tipohb[] = [];
 
   constructor(private habitacionService:HabitacionService,
     private router: Router,
+    private plantaService:PlantaService,
+    private tipoHbService:TipohbService,
     private activateRoute: ActivatedRoute
     ) { }
 
   ngOnInit(): void {
+    this.cargarPlantas();
+    this.cargarTiposHb();
     this.cargarHabi();
   }
 
@@ -61,5 +76,22 @@ export class FormHabitacionComponent implements OnInit {
         .subscribe((habitacion) => this.habi = habitacion);
       }
     })
+  }
+
+  cargarPlantas():void{
+
+    this.plantaService.obtenerPlantas().subscribe(data =>{
+
+      this.plantas = data;
+    })
+
+  }
+
+  cargarTiposHb():void{
+
+    this.tipoHbService.getTiposHb().subscribe(data =>{
+      this.tiposHb = data;
+    })
+
   }
 }

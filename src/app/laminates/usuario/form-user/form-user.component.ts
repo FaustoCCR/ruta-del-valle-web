@@ -24,6 +24,7 @@ export class FormUserComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarUsuario();
+    
   }
 
   onUpdate():void{
@@ -68,5 +69,7 @@ export class FormUserComponent implements OnInit {
     }
 
   }
+
+
 
 }
