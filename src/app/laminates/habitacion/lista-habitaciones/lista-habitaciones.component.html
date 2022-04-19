@@ -2,8 +2,6 @@
 <div class="container mt-5">
   <h3 class="text-left">LISTADO DE HABITACIONES</h3>
   <div class="my-2 text-left">
-    <button class="button btn btn-rounded btn-primary" type="button" [routerLink]="['/habitacion/form']"><i class="fa-solid fa-circle-plus"></i> Nuevo</button>
-
   </div>
   <div class="row row-cols-1 row-cols-md-4 g-2">
     <div class="col" *ngFor="let habitacion of habitaciones">
@@ -12,8 +10,7 @@
           <h5 class="card-title">Nro: {{habitacion.num_habitacion}}</h5>
           <p class="card-text">Habitación {{habitacion.tipo_habitacion}} </p>
           <span><i class="fa-solid fa-bed"></i></span>
-          <button class="button btn btn-rounded btn-primary" type="button" [routerLink]="['/habitacion/form']"><i class="fa-solid fa-circle-plus"></i> Editar</button>
-          <button class="btn btn-danger"> <i class="fa-solid fa-trash"></i> Eliminar</button>
+          
         </div>
         <a [routerLink]="['/reserva/detalle',habitacion.num_habitacion]">
           <div class="card-footer text-center"[ngStyle]="{'background-color':getColorFooter(habitacion.estado)}">

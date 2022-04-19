@@ -18,6 +18,8 @@ import { ProductoComponent } from './laminates/producto/producto/producto.compon
 import { FormProductoComponent } from './laminates/producto/form-producto/form-producto.component';
 import { ConsumoComponent } from './laminates/consumo/consumo-producto/consumo.component';
 import { FormConsumoComponent } from './laminates/consumo/form-consumo/form-consumo.component';
+import { TableHabitacionesComponent } from './laminates/habitacion/table-habitaciones/table-habitaciones.component';
+
 
 const routes: Routes = [
   {path: '', component: IndexComponent},
@@ -41,7 +43,10 @@ const routes: Routes = [
   {path: 'registro/:id', component: FormUserComponent},
   {path: 'reserva/detalle/:num', component: DetalleReservaComponent},
   {path: 'habitaciones/consumo', component: HabitacionesToSellComponent},
+  {path: 'habitaciones/tabla', component: TableHabitacionesComponent},
+  {path: 'habitacion/form/:id', component: FormHabitacionComponent},
   {path: '**', redirectTo: '',pathMatch: 'full'}
+
 ];
 
 @NgModule({

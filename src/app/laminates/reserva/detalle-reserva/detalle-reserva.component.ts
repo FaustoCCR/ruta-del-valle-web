@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { Habitacion } from '../../habitacion/habitacion.interface';
+import { Habitacion } from '../../habitacion/habitacion';
 import { HabitacionService } from '../../habitacion/service/habitacion.service';
 import { UsuarioService } from '../../usuario/service/usuario.service';
 import { Reserva } from '../reserva';

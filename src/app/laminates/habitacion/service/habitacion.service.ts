@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { Habitacion } from '../habitacion.interface';
+import { Habitacion } from '../habitacion';
 
 @Injectable({
   providedIn: 'root'
@@ -44,9 +44,9 @@ export class HabitacionService {
     return this.httpClient.post<Habitacion>(this.urlEndPoint, habitacion, {headers: this.httpHeaders})
   }
 
-  update(id_habitacion:number, id_planta:number, id_tipo:number, habitacion: Habitacion): Observable<Habitacion>{
+  update(id_habitacion:number,habitacion: Habitacion): Observable<Habitacion>{
 
-    return this.httpClient.put<Habitacion>(`${this.urlEndPoint}/${id_habitacion}?${this.planta}=${id_planta}&${this.tipo}=${id_tipo}`, habitacion, {headers: this.httpHeaders})
+    return this.httpClient.put<Habitacion>(`${this.urlEndPoint}/${id_habitacion}`, habitacion, {headers: this.httpHeaders})
   }
 
   delete(id:number): Observable<Habitacion> {

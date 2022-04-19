@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { ListaPlantasComponent } from './laminates/planta/lista-plantas/lista-plantas.component';
 import { ListaTiposComponent } from './laminates/tipoHb/lista-tipos/lista-tipos.component';
 import { ListaHabitacionesComponent } from './laminates/habitacion/lista-habitaciones/lista-habitaciones.component';
-import { DetalleHabitacionComponent } from './laminates/habitacion/detalle-habitacion/detalle-habitacion.component';
 
 
 import { HttpClientModule } from '@angular/common/http';
@@ -34,6 +33,7 @@ import { FormProductoComponent } from './laminates/producto/form-producto/form-p
 import { FormConsumoComponent } from './laminates/consumo/form-consumo/form-consumo.component';
 import { ConsumoComponent } from './laminates/consumo/consumo-producto/consumo.component';
 import { DetalleConsumoComponent } from './laminates/consumo/detalle-consumo/detalle-consumo/detalle-consumo.component';
+import { TableHabitacionesComponent } from './laminates/habitacion/table-habitaciones/table-habitaciones.component';
 
 
 
@@ -43,7 +43,6 @@ import { DetalleConsumoComponent } from './laminates/consumo/detalle-consumo/det
     ListaPlantasComponent,
     ListaTiposComponent,
     ListaHabitacionesComponent,
-    DetalleHabitacionComponent,
     HeaderComponent,
     FormTipoComponent,
     FormPlantaComponent,
@@ -65,7 +64,8 @@ import { DetalleConsumoComponent } from './laminates/consumo/detalle-consumo/det
     FormConsumoComponent,
     ConsumoComponent,
     FormHabitacionComponent,
-    DetalleConsumoComponent
+    DetalleConsumoComponent,
+    TableHabitacionesComponent
   ],
   imports: [
     BrowserModule,

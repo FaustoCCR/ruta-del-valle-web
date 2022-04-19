@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Habitacion } from '../../habitacion/habitacion.interface';
+import { Habitacion } from '../../habitacion/habitacion';
 import { HabitacionService } from '../../habitacion/service/habitacion.service';
 
 @Component({
