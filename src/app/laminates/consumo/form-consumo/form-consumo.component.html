@@ -1,5 +1,7 @@
-<div class="col-md-6 offset-md-3">
-    <h3 class="text-center">Concumo</h3>
+<app-header></app-header>
+<div class="container mt-3">
+  <div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Consumo</h3>
     <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
       <div class="form-group mb-3">
 
@@ -21,4 +23,5 @@
       <button class="btn btn-primary form-control" [routerLink]="['/productos']"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
     </form>
   </div>
+</div>
   

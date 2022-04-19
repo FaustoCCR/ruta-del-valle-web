@@ -1,4 +1,6 @@
-<h5>Lista de productos</h5>
+<app-header></app-header>
+<div class="container mt-3">
+  <h5>Lista de productos</h5>
 <div class="my-2 text-left" *ngIf="isAdmin">
   <button class="button btn btn-rounded btn-primary" type="button" [routerLink]="['/productos/form']"><i class="fa-solid fa-circle-plus"></i> Nuevo </button>
 </div>
@@ -31,3 +33,4 @@
     </tr>
 </tbody>
 </table>
+</div>

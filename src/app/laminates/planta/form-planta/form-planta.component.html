@@ -1,11 +1,14 @@
-<div class="col-md-6 offset-md-3">
-  <h3 class="text-center">Planta</h3>
-  <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-    <div class="form-group mb-3">
-      <label for="nombre" class="form-label">Nombre</label>
-      <input type="text" id="nombre" name="nombre" class="form-control" [(ngModel)]="planta.nombre" required>
-    </div>
-    <button class="btn btn-success form-control mb-3" [disabled]="!f.valid">Crear</button>
-    <button class="btn btn-primary form-control" [routerLink]="['/plantas']"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
-  </form>
+<app-header></app-header>
+<div class="container mt-3">
+  <div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Planta</h3>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+      <div class="form-group mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" [(ngModel)]="planta.nombre" required>
+      </div>
+      <button class="btn btn-success form-control mb-3" [disabled]="!f.valid">Crear</button>
+      <button class="btn btn-primary form-control" [routerLink]="['/plantas']"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+    </form>
+  </div>
 </div>

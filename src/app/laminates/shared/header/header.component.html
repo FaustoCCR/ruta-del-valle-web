@@ -15,11 +15,12 @@
         </li>
 <!--habitaciones-->
         <li class="nav-item dropdown" *ngIf="isLogged">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Habitaciones</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Recepción</a>
           <ul class="dropdown-menu">
             <li *ngIf="isLogged"><a class="dropdown-item" routerLink="/habitaciones"><i class="fa-solid fa-bed"></i> Habitaciones</a></li>
             <li><a class="dropdown-item" [routerLink]="['/plantas']"><i class="fa-solid fa-building"></i> Plantas</a></li>
             <li><a class="dropdown-item" [routerLink]="['/tiposHb']"><i class="fa-solid fa-t"></i> Tipos</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/habitaciones/tabla']"><i class="fa-solid fa-table"></i> Gestión Habitaciones</a></li>
           </ul>
         </li>
 <!--Servicios-->

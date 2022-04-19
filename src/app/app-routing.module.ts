@@ -18,6 +18,8 @@ import { ProductoComponent } from './laminates/producto/producto/producto.compon
 import { FormProductoComponent } from './laminates/producto/form-producto/form-producto.component';
 import { ConsumoComponent } from './laminates/consumo/consumo-producto/consumo.component';
 import { FormConsumoComponent } from './laminates/consumo/form-consumo/form-consumo.component';
+import { ListaReservasComponent } from './laminates/reserva/lista-reservas/lista-reservas.component';
+import { ListaPagosComponent } from './laminates/pago/lista-pagos/lista-pagos.component';
 
 const routes: Routes = [
   {path: '', component: IndexComponent},
@@ -41,6 +43,8 @@ const routes: Routes = [
   {path: 'registro/:id', component: FormUserComponent},
   {path: 'reserva/detalle/:num', component: DetalleReservaComponent},
   {path: 'habitaciones/consumo', component: HabitacionesToSellComponent},
+  {path: 'reservas', component: ListaReservasComponent},
+  {path: 'pagos', component: ListaPagosComponent},
   {path: '**', redirectTo: '',pathMatch: 'full'}
 ];
 
