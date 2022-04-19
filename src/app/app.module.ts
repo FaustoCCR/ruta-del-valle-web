@@ -57,8 +57,8 @@ import { DetalleConsumoComponent } from './laminates/consumo/detalle-consumo/det
     FormProductoComponent,
     FormConsumoComponent,
     ConsumoComponent,
-    DetalleConsumoComponent,
-    FormHabitacionComponent
+    FormHabitacionComponent,
+    DetalleConsumoComponent
 
   ],
   imports: [
