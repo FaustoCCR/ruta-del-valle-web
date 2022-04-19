@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
+import { ActivatedRoute, Router } from '@angular/router';
+import {Consumo}
 
 @Component({
   selector: 'app-detalle-habitacion',
@@ -7,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalleHabitacionComponent implements OnInit {
 
+  consumo: Consumo=new Consumo();
   constructor() { }
 
   ngOnInit(): void {

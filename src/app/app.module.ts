@@ -28,6 +28,7 @@ import { ProductoComponent } from './laminates/producto/producto/producto.compon
 import { FormProductoComponent } from './laminates/producto/form-producto/form-producto.component';
 import { FormConsumoComponent } from './laminates/consumo/form-consumo/form-consumo.component';
 import { ConsumoComponent } from './laminates/consumo/consumo-producto/consumo.component';
+import { DetalleConsumoComponent } from './laminates/consumo/detalle-consumo/detalle-consumo/detalle-consumo.component';
 
 
 
@@ -54,7 +55,8 @@ import { ConsumoComponent } from './laminates/consumo/consumo-producto/consumo.c
     ProductoComponent,
     FormProductoComponent,
     FormConsumoComponent,
-    ConsumoComponent
+    ConsumoComponent,
+    DetalleConsumoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,24 @@
-<p>form-consumo works!</p>
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Concumo</h3>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+      <div class="form-group mb-3">
+
+        <label for="nombre" class="form-label">Reserva</label>
+        <form>
+            <select>
+                <option>{{consumo.id_reserva}}</option>
+            </select>
+          </form>
+        <!-- <input type="text" id="nombre" name="nombre" class="form-control" [(ngModel)]="consumo.id_reserva" required>-->
+
+        <label for="descripción" class="form-label">Fecha</label>
+        <input type="text" id="descripcion" name="descripcion" class="form-control" [(ngModel)]="consumo.fecha" required>
+        <label for="precio_venta" class="form-label">Producto</label>
+        <!--<input type="text" id="precio_venta" name="precio_venta" class="form-control" [(ngModel)]="producto.precio_venta" required>-->
+        
+      </div>
+      <button class="btn btn-success form-control mb-3" [disabled]="!f.valid">Crear</button>
+      <button class="btn btn-primary form-control" [routerLink]="['/productos']"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+    </form>
+  </div>
+  
