@@ -14,7 +14,6 @@ import { HeaderComponent } from './laminates/shared/header/header.component';
 import { FormTipoComponent } from './laminates/tipoHb/form-tipo/form-tipo.component';
 import { FormPlantaComponent } from './laminates/planta/form-planta/form-planta.component';
 import { FormHabitacionComponent } from './laminates/habitacion/form-habitacion/form-habitacion.component';
-import { SideBarComponent } from './laminates/shared/side-bar/side-bar.component';
 import { LoginComponent } from './laminates/auth/login/login.component';
 import { RegistroComponent } from './laminates/auth/registro/registro.component';
 import { IndexComponent } from './laminates/index/index.component';
@@ -22,7 +21,6 @@ import { plantaInterceptorProvider } from './interceptors/planta-interceptor.ser
 import { UsersComponent } from './laminates/usuario/users/users.component';
 import { FormUserComponent } from './laminates/usuario/form-user/form-user.component';
 import { DetalleReservaComponent } from './laminates/reserva/detalle-reserva/detalle-reserva.component';
-import { FooterComponent } from './laminates/shared/footer/footer.component';
 import { HabitacionesToSellComponent } from './laminates/consumo/habitaciones-to-sell/habitaciones-to-sell.component';
 
 import { ListaReservasComponent } from './laminates/reserva/lista-reservas/lista-reservas.component';
@@ -46,14 +44,12 @@ import { TableHabitacionesComponent } from './laminates/habitacion/table-habitac
     HeaderComponent,
     FormTipoComponent,
     FormPlantaComponent,
-    SideBarComponent,
     LoginComponent,
     RegistroComponent,
     IndexComponent,
     UsersComponent,
     FormUserComponent,
     DetalleReservaComponent,
-    FooterComponent,
     FormConsumoComponent,
     HabitacionesToSellComponent,
     ListaReservasComponent,
