@@ -1,0 +1,58 @@
+
+<section class="dashboard">
+
+  <div class="dash-content">
+
+    <div class="overview">
+      <div class="title">
+        <i class="fa-solid fa-gauge-simple-high"></i>
+        <span class="text">Dashboard</span>
+      </div>
+      <div class="boxes">
+        <div class="box box1">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <span class="text">Habitaciones Disponibles</span>
+          <span class="number">{{panel.hb_disponibles}}</span>
+        </div>
+        <div class="box box2">
+          <i class="fa-solid fa-tags"></i>
+          <span class="text">Habitaciones Reservadas</span>
+          <span class="number">{{panel.hb_reservadas}}</span>
+        </div>
+        <div class="box box3">
+          <i class="fa-solid fa-hourglass"></i>
+          <span class="text">Habitaciones Ocupadas</span>
+          <span class="number">{{panel.hb_ocupadas}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity">
+      <div class="title">
+        <i class="fa-regular fa-clock"></i>
+        <span class="text">Actividad Reciente</span>
+      </div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Habitación</th>
+            <th scope="col">Consumo</th>
+            <th scope="col">Alojamiento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pagos of panel.pagos">
+            <th scope="row">{{pagos.id_pago}}</th>
+            <td>{{pagos.cliente}}</td>
+            <td>Nº {{pagos.num_habitacion +" | "+ pagos.tipo_habitacion}}</td>
+            <td>$ {{pagos.pago_consumo}}</td>
+            <td>$ {{pagos.pago_alojamiento}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</section>

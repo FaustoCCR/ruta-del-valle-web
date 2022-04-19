@@ -25,6 +25,10 @@ import { FormUserComponent } from './laminates/usuario/form-user/form-user.compo
 import { DetalleReservaComponent } from './laminates/reserva/detalle-reserva/detalle-reserva.component';
 import { FooterComponent } from './laminates/shared/footer/footer.component';
 import { HabitacionesToSellComponent } from './laminates/consumo/habitaciones-to-sell/habitaciones-to-sell.component';
+
+import { ListaReservasComponent } from './laminates/reserva/lista-reservas/lista-reservas.component';
+import { ListaPagosComponent } from './laminates/pago/lista-pagos/lista-pagos.component';
+import { DashboardPanelComponent } from './laminates/dashboard-panel/dashboard-panel.component';
 import { ProductoComponent } from './laminates/producto/producto/producto.component';
 import { FormProductoComponent } from './laminates/producto/form-producto/form-producto.component';
 import { FormConsumoComponent } from './laminates/consumo/form-consumo/form-consumo.component';
@@ -53,13 +57,15 @@ import { DetalleConsumoComponent } from './laminates/consumo/detalle-consumo/det
     FooterComponent,
     FormConsumoComponent,
     HabitacionesToSellComponent,
+    ListaReservasComponent,
+    ListaPagosComponent,
+    DashboardPanelComponent,
     ProductoComponent,
     FormProductoComponent,
     FormConsumoComponent,
     ConsumoComponent,
     FormHabitacionComponent,
     DetalleConsumoComponent
-
   ],
   imports: [
     BrowserModule,
