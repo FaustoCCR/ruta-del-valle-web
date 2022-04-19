@@ -29,7 +29,11 @@
       
     </div>
   </div> -->
-  <div class="text-center" *ngIf="isLogged; else loggedOut">
+
+
+
+
+<!--   <div class="text-center" *ngIf="isLogged; else loggedOut">
     <h2>Has iniciado Sesión</h2>
   </div>
   
@@ -57,4 +61,30 @@
         </div>
       </div>
     </div>
-  </ng-template>
+  </ng-template> -->
+
+<div class="text-center" *ngIf="isLogged; else loggedOut">
+  <h2>Has iniciado Sesión</h2>
+</div>
+
+<ng-template #loggedOut>
+  <div class="wrapper">
+    <div class="title"><span>Sistema de Gestión</span></div>
+  
+    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+      <div class="own_row form-group">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" placeholder="Usuario" name="username" id="username" class="form-control" [(ngModel)]="username" required>
+      </div>
+      <div class="own_row form-group">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Contraseña" name="password" id="password" class="form-control" [(ngModel)]="password" required >
+      </div>
+      <div class="own_row button form-group">
+        <input type="submit" value="Acceder" class="form-control" [disabled]="!f.valid">
+      </div>
+  
+    </form>
+    <div *ngIf="f.submitted && isLoginFail" class="alert alert-danger mt-3">Error en el login: {{errMsj}}</div>
+  </div>
+</ng-template>

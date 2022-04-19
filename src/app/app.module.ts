@@ -27,6 +27,7 @@ import { FormConsumoComponent } from './laminates/consumo/form-consumo/form-cons
 import { HabitacionesToSellComponent } from './laminates/consumo/habitaciones-to-sell/habitaciones-to-sell.component';
 import { ListaReservasComponent } from './laminates/reserva/lista-reservas/lista-reservas.component';
 import { ListaPagosComponent } from './laminates/pago/lista-pagos/lista-pagos.component';
+import { DashboardPanelComponent } from './laminates/dashboard-panel/dashboard-panel.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { ListaPagosComponent } from './laminates/pago/lista-pagos/lista-pagos.co
     FormConsumoComponent,
     HabitacionesToSellComponent,
     ListaReservasComponent,
-    ListaPagosComponent
+    ListaPagosComponent,
+    DashboardPanelComponent
   ],
   imports: [
     BrowserModule,

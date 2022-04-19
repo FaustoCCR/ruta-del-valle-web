@@ -26,7 +26,7 @@
         <li class="nav-item dropdown" *ngIf="isLogged">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Servicios</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" [routerLink]="['/habitaciones/consumo']">Consumo</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/habitaciones/consumo']"><i class="fa-solid fa-store"></i> Consumo</a></li>
             <li><a class="dropdown-item" >Productos</a></li>
           </ul>
         </li>
@@ -35,17 +35,17 @@
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Documentos</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" [routerLink]="['/reservas']"><i class="fa-solid fa-address-book"></i> Reservas</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/pagos']"><i class="fa-solid fa-money-bill-wave"></i> Pagos</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/pagos']"><i class="fa-solid fa-comment-dollar"></i> Pagos</a></li>
           </ul>
         </li>
 <!--para los usuario-->
         <li class="nav-item" *ngIf="!isLogged">
         <a class="nav-link" [routerLink]="['/login']"><i class="fa-solid fa-arrow-right-from-bracket"></i> Iniciar Sesión</a>
         </li>
-        <li class="nav-item dropdown" *ngIf="isLogged">
+        <li class="nav-item dropdown " *ngIf="isLogged">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fa-solid fa-user"></i> {{ username }}</a>
           
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <li *ngIf="isLogged">
               <a class="dropdown-item" [routerLink]="['/registro']"><i class="fa-solid fa-user-plus"></i> Crear Cuenta</a>
             </li>
