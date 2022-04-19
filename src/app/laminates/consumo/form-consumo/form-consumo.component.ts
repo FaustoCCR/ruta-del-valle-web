@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Consumo } from '../consumo-producto/consumo';
 import { ConsumoService } from '../consumo-producto/consumo.service';
+import { DetalleConsumoComponent } from '../detalle-consumo/detalle-consumo/detalle-consumo.component';
 
 
 @Component({
@@ -13,12 +14,12 @@ import { ConsumoService } from '../consumo-producto/consumo.service';
 export class FormConsumoComponent implements OnInit {
 
   consumo: Consumo=new Consumo();
+
   constructor(private consumoService:ConsumoService,
     private router: Router,
     private activateRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-
   }
   onCreate():void{
     this.activateRoute.params.subscribe(params =>{
@@ -34,17 +35,7 @@ export class FormConsumoComponent implements OnInit {
           })
           this.router.navigate(['/productos']);
         },error => console.log(error));
-      }/*else{
-        /* caso contrario actualizamos el registro *//*
-        this.consumoService.update(id,this.consumo)
-        .subscribe(() =>{
-          Swal.fire({
-            icon: 'success',
-            title: `Registro actualizado`
-          })
-          this.router.navigate(['/plantas']);
-        }
-      }*/
+      }
 
     })
 
