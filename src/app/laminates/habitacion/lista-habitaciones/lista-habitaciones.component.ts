@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
-import { Habitacion } from '../habitacion.interface';
+import { Habitacion } from '../habitacion';
 import { HabitacionService } from '../service/habitacion.service';
 
 @Component({
@@ -59,17 +59,4 @@ export class ListaHabitacionesComponent implements OnInit {
     }
     return color;
   }
-
-  eliminar(id:number){
-    this.habitacionService.delete(id)
-    .subscribe(() =>{
-      Swal.fire({
-        icon: 'success',
-        title: 'Eliminado'
-      })
-
-      this.cargarHabitaciones();
-    });
-  }
-
 }

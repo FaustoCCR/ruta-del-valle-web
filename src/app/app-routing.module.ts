@@ -20,6 +20,7 @@ import { ConsumoComponent } from './laminates/consumo/consumo-producto/consumo.c
 import { FormConsumoComponent } from './laminates/consumo/form-consumo/form-consumo.component';
 import { ListaReservasComponent } from './laminates/reserva/lista-reservas/lista-reservas.component';
 import { ListaPagosComponent } from './laminates/pago/lista-pagos/lista-pagos.component';
+import { TableHabitacionesComponent } from './laminates/habitacion/table-habitaciones/table-habitaciones.component';
 
 const routes: Routes = [
   {path: '', component: IndexComponent},
@@ -45,7 +46,10 @@ const routes: Routes = [
   {path: 'habitaciones/consumo', component: HabitacionesToSellComponent},
   {path: 'reservas', component: ListaReservasComponent},
   {path: 'pagos', component: ListaPagosComponent},
+  {path: 'habitaciones/tabla', component: TableHabitacionesComponent},
+  {path: 'habitacion/form/:id', component: FormHabitacionComponent},
   {path: '**', redirectTo: '',pathMatch: 'full'}
+
 ];
 
 @NgModule({

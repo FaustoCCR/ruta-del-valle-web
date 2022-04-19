@@ -28,7 +28,7 @@
             <input type="number" class="form-control" id="costo_noche" name="costo_noche"
             [(ngModel)]="habi.costo_noche" required>
         </div>
-        <button class="btn btn-success form-control" [disabled]="!f.valid">Crear</button>
+        <button class="btn btn-primary" role="button" (click)="onCreate()">Crear</button>
       </form>
   </div>
 
