@@ -26,8 +26,10 @@
         <li class="nav-item dropdown" *ngIf="isLogged">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Servicios</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" [routerLink]="['/habitaciones/consumo']"><i class="fa-solid fa-store"></i> Consumo</a></li>
-            <li><a class="dropdown-item" >Productos</a></li>
+
+            <li><a class="dropdown-item" [routerLink]="['/consumos']"><i class="fa-solid fa-store"></i> Consumo</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/productos']"><i class="fa-solid fa-box-open"></i> Productos</a></li>
+
           </ul>
         </li>
 <!--Documentos-->
