@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Producto } from 'src/app/laminates/producto/producto';
+import { ProductosService } from 'src/app/laminates/producto/productos.service';
+import { Consumo } from '../../consumo-producto/consumo';
+import { ConsumoService } from '../../consumo-producto/consumo.service';
 
 @Component({
   selector: 'app-detalle-consumo',
@@ -7,9 +12,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalleConsumoComponent implements OnInit {
 
-  constructor() { }
+ 
+
+  constructor(
+    private activaRoute:ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
+
+  cargarProducto():void{
+    
+  }
+
+
+
+
+
+
+
 
 }
