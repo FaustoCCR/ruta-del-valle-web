@@ -22,30 +22,16 @@ export class FormHabitacionComponent implements OnInit {
   }
 
   onCreate():void{
-    this.activateRoute.params.subscribe(params =>{
-      let id_habitacion = params['id_habitacion']
-      let id_planta = params['id_planta']
-      let id_tipo = params['id_tipo']
-      if(id_habitacion==null){
-        this.habitacionService.create(this.habi)
-        .subscribe(data =>{
-          Swal.fire({
-            icon: 'success',
-            title: `Habitación ${data.id_habitacion} creada con éxito`
-          })
-          this.router.navigate(['/']);
-        },error => console.log(error));
-      }else{
-        this.habitacionService.update(id_habitacion,id_planta,id_tipo, this.habi)
-        .subscribe(() =>{
-          Swal.fire({
-            icon: 'success',
-            title: `Registro actualizado`
-          })
-          this.router.navigate(['/']);
-        })
-      }
-    })
+    this.habitacionService.create(this.habi).subscribe(
+      response =>{this.router.navigate(['/habitacion'])
+      Swal.fire({
+        icon: 'success',
+        title: `Habitación ${response.id_habitacion} creada con éxito`
+      })
+    },error => console.log(error));
   } 
 
+  update():void{
+
+  } 
 }
